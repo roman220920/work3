@@ -2,5 +2,5 @@
  git=morning_________________________________________
  git=afternoon
  git=night
- git=tommrrow
+ git=ommrrow
 git=conflict
