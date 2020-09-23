@@ -1,11 +1,7 @@
- git=hello
- git=morning_________________________________________
- git=afternoon
- git=night
- git=tommrrow
- git=conflict
- git=ommrrow
- git=1
- git=conflict
- git=2
+ git1=hello
+ git2=morning
+ git3=afternoon
+ git4=night
+ git5=tommrrow
+ git6=conflict
 
