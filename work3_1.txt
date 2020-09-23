@@ -3,4 +3,6 @@
  git=afternoon
  git=night
  git=tommrrow
-git-konflict
+ git=konflict
+
+
