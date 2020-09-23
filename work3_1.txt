@@ -3,6 +3,6 @@
  git=afternoon
  git=night
  git=tommrrow
- git=    conflict
-
+ git=conflict
+ git=ommrrow
 
