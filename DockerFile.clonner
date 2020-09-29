@@ -1,0 +1,15 @@
+FROM alpine
+
+RUN apk update --no-cache && apk add git
+
+
+ENV url=https://github.com/roman220920/work3.git
+ENV git_name=""
+
+WORKDIR /data
+
+CMD git clone $url $git_name
+
+#docker build -t clonner:1.1 -f DockerFile.clonner .
+#docker run -e git_name='my-git' -v $PWD:/data clonner:1.1
+

@@ -1,0 +1,30 @@
+FROM nginx:latest
+
+COPY nginx.conf /etc/nginx/nginx.conf
+COPY index.html  /usr/share/nginx/html
+
+ENV NGINX_VERSION=1.2
+
+ENV name="RRR"
+
+COPY entrypoint.sh entrypoint.sh
+
+RUN chmod u+x entrypoint.sh
+
+#ENTRYPOINT ./entrypoint.sh -??
+#CMD [$name]                - ??
+
+CMD sh -c "./entrypoint.sh $name"
+# docker build -t hello:1.1 -f DockerFile.nginx
+#docker run -p8080:80 -e name=my  hello:1.1
+####my
+####Starting nginx
+#[root@ip-172-31-46-246 my-work3]# docker ps
+#CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                  NAMES
+#c9f251110c57        hello:1.1           "/docker-entrypoint.…"   45 seconds ago      Up 44 seconds       0.0.0.0:8080->80/tcp   confident_clarke
+#
+#Chain DOCKER (1 references)
+#target     prot opt source               destination
+#ACCEPT     tcp  --  anywhere             ip-172-17-0-2.eu-west-1.compute.internal  tcp dpt:http
+
+
