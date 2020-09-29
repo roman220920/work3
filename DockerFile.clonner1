@@ -1,0 +1,17 @@
+FROM alpine:latest
+
+RUN apk update && apk add git
+
+WORKDIR /data
+
+#ENV url ihttps://github.com/roman220920/work3.git
+
+ENTRYPOINT ["git", "clone"]
+
+#CMD sh -c "$url"
+
+CMD ["https://github.com/roman220920/work3.git"]
+
+#[root@ip-172-31-46-246 my-work3]# docker build -t clonner1:1.1 -f DockerFile.clonner1 .
+# docker run  -v $PWD:/data clonner1:1.1        
+# docker run  -v $PWD:/data clonner1:1.1  https://github.com/Dgadavin/devopsology-base-course.git
