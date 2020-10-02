@@ -1,0 +1,9 @@
+- hosts: local
+  become: true
+  become_method: su
+  become_user: root
+  remote_user: ec2-user
+  vars:
+          listen: 8080
+  roles:
+   - nginx
